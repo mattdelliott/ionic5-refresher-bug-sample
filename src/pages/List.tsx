@@ -1,5 +1,29 @@
-import { IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi } from 'ionicons/icons';
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonList,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonRefresher,
+  IonRefresherContent
+} from '@ionic/react';
+import {
+  americanFootball,
+  basketball,
+  beer,
+  bluetooth,
+  boat,
+  build,
+  flask,
+  football,
+  paperPlane,
+  wifi
+} from 'ionicons/icons';
 import React from 'react';
 
 const ListPage: React.FC = () => {
@@ -15,6 +39,9 @@ const ListPage: React.FC = () => {
       </IonHeader>
 
       <IonContent>
+        <IonRefresher slot="fixed" onIonRefresh={async e => {}}>
+          <IonRefresherContent />
+        </IonRefresher>
         <ListItems />
       </IonContent>
     </IonPage>

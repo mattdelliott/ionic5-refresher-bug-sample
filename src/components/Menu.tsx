@@ -1,7 +1,6 @@
 import {
   IonContent,
   IonHeader,
-  IonIcon,
   IonItem,
   IonLabel,
   IonList,
@@ -31,7 +30,6 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
           return (
             <IonMenuToggle key={index} autoHide={false}>
               <IonItem routerLink={appPage.url} routerDirection="none">
-                <IonIcon slot="start" icon={appPage.icon} />
                 <IonLabel>{appPage.title}</IonLabel>
               </IonItem>
             </IonMenuToggle>
